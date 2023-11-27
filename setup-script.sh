@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Variables
-resourceGroup="acdnd-c4-project"
-location="westus"
-osType="UbuntuLTS"
+resourceGroup="app-01-sel-dev-rg"
+location="southeastasia"
+osType="ubuntu2204"
 vmssName="udacity-vmss"
 adminName="udacityadmin"
 storageAccount="udacitydiag$RANDOM"
