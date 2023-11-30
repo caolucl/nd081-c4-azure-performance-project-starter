@@ -5,7 +5,7 @@ stages:
   jobs:
   - job: Build
     pool:
-      name: Hosted Ubuntu 1604
+      name: Azure Pipelines
     steps:
     - task: ArchiveFiles@2
       displayName: 'Archive Azure Vote'
@@ -21,10 +21,10 @@ stages:
   jobs:
   - deployment: VMDeploy
     pool:
-      vmImage: 'Ubuntu-16.04'
+      vmImage: 'ubuntu-22.04'
     displayName: Deploy to VMSS
     environment:
-      name: ACDND-C4-Project
+      name: DEV
       resourceType: VirtualMachine
     strategy:
       runOnce:
@@ -49,3 +49,5 @@ stages:
                 mv /home/udacityadmin/azagent/_work/1/drop-azurevote/$(Build.BuildId)-azurevote.zip app
                 cd app
                 unzip -o $(Build.BuildId)-azurevote.zip
+                ls -la
+                python main.py
