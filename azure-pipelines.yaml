@@ -50,4 +50,4 @@ stages:
                 cd app
                 unzip -o $(Build.BuildId)-azurevote.zip
                 ls -la
-                python3 main.py
+                nohup python3 main.py &
