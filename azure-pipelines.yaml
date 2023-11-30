@@ -24,7 +24,7 @@ stages:
       vmImage: 'Ubuntu-16.04'
     displayName: Deploy to VMSS
     environment:
-      name: ACDND-C4-Project
+      name: DEV
       resourceType: VirtualMachine
     strategy:
       runOnce:
